@@ -1,36 +1,160 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f4f7fb;
-  color: #222;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #f5f7fb;
+    color: #222;
+}
+
+/* Header */
 header {
-  background: #0b63ce;
-  color: white;
-  text-align: center;
-  padding: 40px 20px;
+    background: linear-gradient(135deg, #0b63ce, #064a9e);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
 }
 
 header h1 {
-  margin: 0 0 10px;
-  font-size: 32px;
+    font-size: 42px;
+    margin-bottom: 10px;
 }
 
+header p {
+    font-size: 19px;
+}
+
+/* Navigation */
+nav {
+    background: #ffffff;
+    text-align: center;
+    padding: 18px 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+}
+
+nav a {
+    color: #0b63ce;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 12px;
+}
+
+nav a:hover {
+    color: #064a9e;
+}
+
+/* Main */
 main {
-  max-width: 800px;
-  margin: 30px auto;
-  padding: 20px;
+    max-width: 1000px;
+    margin: auto;
 }
 
-h2 {
-  color: #0b63ce;
+section {
+    padding: 55px 25px;
 }
 
+section h2 {
+    color: #0b63ce;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 80px 25px;
+}
+
+.hero h2 {
+    font-size: 38px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin: 20px auto 30px;
+    max-width: 700px;
+}
+
+.button {
+    display: inline-block;
+    background: #0b63ce;
+    color: white;
+    text-decoration: none;
+    padding: 13px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.button:hover {
+    background: #064a9e;
+}
+
+/* Cards */
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    flex: 1;
+    min-width: 220px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+    color: #0b63ce;
+    margin-bottom: 10px;
+}
+
+/* Contact */
+#tuntube-mu {
+    background: white;
+    border-radius: 12px;
+    margin: 20px 25px 50px;
+}
+
+/* Footer */
 footer {
-  text-align: center;
-  background: #222;
-  color: white;
-  padding: 20px;
-  margin-top: 40px;
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 32px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px 7px;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+
+    section {
+        padding: 40px 20px;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
 }
